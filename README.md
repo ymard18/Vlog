@@ -11,8 +11,10 @@ Command: wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.
 
 Step 4: Extract the Hadoop tar File.
 Command: tar -xvf hadoop-2.7.3.tar.gz
+
 Step 5: Add the Hadoop and Java paths in the bash file (.bashrc).
 Open. bashrc file. Now, add Hadoop and Java Path as shown below.
+![image](https://user-images.githubusercontent.com/75766691/104581761-f8dab580-5699-11eb-9a42-267e53e0c6f8.png)
 
 Command:  vi .bashrc
 Then, save the bash file and close it.
@@ -30,3 +32,34 @@ core-site.xml informs Hadoop daemon where NameNode runs in the cluster. It conta
 
 Command: vi core-site.xml
 
+Step 8: Edit hdfs-site.xml and edit the property mentioned below inside configuration tag:
+hdfs-site.xml contains configuration settings of HDFS daemons (i.e. NameNode, DataNode, Secondary NameNode). It also includes the replication factor and block size of HDFS.
+
+Step 9: Edit the mapred-site.xml file and edit the property mentioned below inside configuration tag:
+mapred-site.xml contains configuration settings of MapReduce application like number of JVM that can run in parallel, the size of the mapper and the reducer process,  CPU cores available for a process, etc.
+
+In some cases, mapred-site.xml file is not available. So, we have to create the mapred-site.xml file using mapred-site.xml template.
+
+Command: cp mapred-site.xml.template mapred-site.xml
+
+Command: vi mapred-site.xml.
+
+Step 10: Edit yarn-site.xml and edit the property mentioned below inside configuration tag:
+yarn-site.xml contains configuration settings of ResourceManager and NodeManager like application memory management size, the operation needed on program & algorithm, etc.
+
+Command: vi yarn-site.xml
+
+Step 11: Edit hadoop-env.sh and add the Java Path as mentioned below:
+hadoop-env.sh contains the environment variables that are used in the script to run Hadoop like Java home path, etc.
+
+Command: vi hadoop–env.sh
+
+Step 12: Go to Hadoop home directory and format the NameNode.
+Command: cd
+
+Command: cd hadoop-2.7.3
+
+Command: bin/hadoop namenode -format
+
+Step 13: Once the NameNode is formatted, go to hadoop-2.7.3/sbin directory and start all the daemons.
+Command: cd hadoop-2.7.3/sbin
