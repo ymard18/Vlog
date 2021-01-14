@@ -1,10 +1,14 @@
 # Vlog
 Install Hadoop
+
 Step 1: Click here to download the Java 8 Package. Save this file in your home directory.
+
 Step 2: Extract the Java Tar File.
 Command: tar -xvf jdk-8u101-linux-i586.tar.gz
+
 Step 3: Download the Hadoop 2.7.3 Package.
 Command: wget https://archive.apache.org/dist/hadoop/core/hadoop-2.7.3/hadoop-2.7.3.tar.gz
+
 Step 4: Extract the Hadoop tar File.
 Command: tar -xvf hadoop-2.7.3.tar.gz
 Step 5: Add the Hadoop and Java paths in the bash file (.bashrc).
