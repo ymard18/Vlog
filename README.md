@@ -64,4 +64,6 @@ Command: bin/hadoop namenode -format
 Step 13: Once the NameNode is formatted, go to hadoop-2.7.3/sbin directory and start all the daemons.
 Command: cd hadoop-2.7.3/sbin
 
+![image](https://user-images.githubusercontent.com/75766691/104582541-f9278080-569a-11eb-888e-717d02ec2d02.png)
+
 Hadoop is an open-source software framework for storing data and running applications on clusters of commodity hardware. It provides massive storage for any kind of data, enormous processing power and the ability to handle virtually limitless concurrent tasks or jobs.
